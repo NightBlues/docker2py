@@ -1,0 +1,11 @@
+FROM ubuntu:trusty
+
+MAINTAINER yaronr
+
+# install the ec2 cli tools
+RUN apt-get update
+RUN apt-get install -yq --no-install-recommends  awscli groff-base
+RUN apt-get clean
+RUN rm -rf /var/lib/apt/lists/* && rm -rf /tmp
+
+#ENTRYPOINT ["aws"]
