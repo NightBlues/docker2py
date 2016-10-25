@@ -1,0 +1,4 @@
+PRJ docker2py
+S src
+PKG menhir core
+B _build/src
