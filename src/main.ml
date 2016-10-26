@@ -14,7 +14,7 @@ let parse_dockerfile filename () =
   in
   match parsed_value with
 	None -> print_endline "Nothing parsed"
-  | Some v -> Dockerfile.pprint v; print_newline ()
+  | Some v -> print_endline (Dockerfile.show_commands v)
   
   
 	

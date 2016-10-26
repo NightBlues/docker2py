@@ -1,4 +1,4 @@
 PRJ docker2py
 S src
-PKG menhir core
+PKG core ppx_deriving
 B _build/src
