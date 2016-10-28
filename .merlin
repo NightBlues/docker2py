@@ -1,4 +1,4 @@
 PRJ docker2py
 S src
-PKG core ppx_deriving
+PKG core ppx_deriving pythonlib
 B _build/src
