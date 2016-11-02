@@ -13,12 +13,10 @@ let parse_dockerfile filename () =
                                      (Lexing.lexeme_start lbuf); None
   in
   match parsed_value with
-	None -> print_endline "Nothing parsed"
+  | None -> print_endline "Nothing parsed"
   | Some v -> print_endline (Dockerfile.show_commands v);
               Generator.create_template v
-  
-  
-	
+
 let () =
   let spec =
     (let open Command.Spec in
