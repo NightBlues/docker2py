@@ -1,4 +1,4 @@
-type header = {from: string; maintainer: string option}
+type header = {from: string * string; maintainer: string option}
 [@@deriving show]
 
 type commands = {

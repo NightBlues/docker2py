@@ -14,8 +14,7 @@ let parse_dockerfile filename () =
   in
   match parsed_value with
   | None -> print_endline "Nothing parsed"
-  | Some v -> print_endline (Dockerfile.show_commands v);
-              Generator.create_template v
+  | Some v -> Generator.create_template v
 
 let () =
   let spec =

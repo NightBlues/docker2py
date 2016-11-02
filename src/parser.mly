@@ -2,7 +2,7 @@
 open Dockerfile
 %}
 %token <string> RUN
-%token <string> FROM
+%token <string*string> FROM
 %token <string> MAINTAINER
 %token <string> ENV
 %token <string> ADD
