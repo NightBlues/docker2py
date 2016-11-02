@@ -1,3 +1,6 @@
+%{
+open Dockerfile
+%}
 %token <string> RUN
 %token <string> FROM
 %token <string> MAINTAINER

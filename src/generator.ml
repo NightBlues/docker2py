@@ -1,7 +1,7 @@
-
+open Dockerfile
 let pos = Lexing.dummy_pos
 
-let get_maintainer (dockerfile:Dockerfile.commands) =
+let get_maintainer dockerfile =
   let maintainer =
     match dockerfile.header.maintainer with
     | None -> ""
@@ -10,7 +10,7 @@ let get_maintainer (dockerfile:Dockerfile.commands) =
   let maintainer = "Maintainer: " ^ maintainer in
   Pythonlib.Ast.Expr (Pythonlib.Ast.Str (maintainer, pos), pos)
 
-let get_template (dockerfile:Dockerfile.commands) =
+let get_template dockerfile =
   let template_name = dockerfile.header.from in
   Pythonlib.Ast.Expr
     (Pythonlib.Ast.Call
